@@ -63,9 +63,9 @@ const CartScreen = () => {
                       <Button
                         variant="light"
                         onClick={() =>
-                          updateCartHandler(item, item.quantity - 1)
+                          updateCartHandler(item, item?.quantity - 1)
                         }
-                        disabled={item.quantity === 1}
+                        disabled={item?.quantity === 1}
                       >
                         <i className="fas fa-minus-circle"></i>
                       </Button>
