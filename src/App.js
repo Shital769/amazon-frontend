@@ -95,7 +95,10 @@ function App() {
                     Cart
                     {cart.cartItems.length > 0 && (
                       <Badge pill bg="danger">
-                        {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+                        {cart.cartItems.reduce(
+                          (a, c) => a + (typeof c.quantity === "number"),
+                          0
+                        )}
                       </Badge>
                     )}
                   </Link>
@@ -157,7 +160,10 @@ function App() {
               categories.map((category) => (
                 <Nav.Item key={category}>
                   <LinkContainer
-                    to={{ pathname: "/search", search: `?category=${category}` }}
+                    to={{
+                      pathname: "/search",
+                      search: `?category=${category}`,
+                    }}
                     onClick={() => setSidebarIsOpen(false)}
                   >
                     <Nav.Link>{category}</Nav.Link>

@@ -51,27 +51,13 @@ const HomeScreen = () => {
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
-          <>
-            <Carousel>
-              {products.map((product) => (
-                <Carousel.Item key={product.slug} sm={6} md={4} lg={3}>
-                  <img
-                    className="d-block w-100 "
-                    src={product.image}
-                    alt={product.name}
-                  />
-                </Carousel.Item>
-              ))}
-            </Carousel>
-
-            <Row className="mt-3" >
-              {products.map((product) => (
-                <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
-                  <Product product={product} />
-                </Col>
-              ))}
-            </Row>
-          </>
+          <Row className="mt-3">
+            {products.map((product) => (
+              <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
+                <Product product={product} />
+              </Col>
+            ))}
+          </Row>
         )}
       </div>
     </div>

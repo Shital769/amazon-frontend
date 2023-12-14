@@ -20,6 +20,12 @@ const CartScreen = () => {
       return;
     }
 
+    // Update cart on the server (replace '/api/cart/update' with your actual endpoint)
+    await axios.put("/api/cart/update", {
+      productId: item._id,
+      quantity,
+    });
+
     ctxDispatch({
       type: "CART_ADD_ITEM",
       payload: { ...item, quantity },
