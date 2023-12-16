@@ -1,0 +1,7 @@
+0000000000000000000000000000000000000000 03b5a7ceb15a2b06c3c738b009fe9b1e80f75755 Shital769 <110831382+Shital769@users.noreply.github.com> 1702098082 +1100	clone: from https://github.com/Shital769/amazon.git
+03b5a7ceb15a2b06c3c738b009fe9b1e80f75755 1ebe2671f4d5a030882fd45ef59a9b2b763241e9 Shital769 <110831382+Shital769@users.noreply.github.com> 1702098324 +1100	checkout: moving from main to 1ebe2671f4d5a030882fd45ef59a9b2b763241e9
+1ebe2671f4d5a030882fd45ef59a9b2b763241e9 e0b8f664b008d62beb37e536447e7e1dab593c4e Shital769 <110831382+Shital769@users.noreply.github.com> 1702099135 +1100	commit: project dividied
+e0b8f664b008d62beb37e536447e7e1dab593c4e 1ebe2671f4d5a030882fd45ef59a9b2b763241e9 Shital769 <110831382+Shital769@users.noreply.github.com> 1702099279 +1100	reset: moving to 1ebe267
+1ebe2671f4d5a030882fd45ef59a9b2b763241e9 87ac65596ae60cd229a5c931abb67ab3bf7b6170 Shital769 <110831382+Shital769@users.noreply.github.com> 1702099651 +1100	commit: cleared
+87ac65596ae60cd229a5c931abb67ab3bf7b6170 87ac65596ae60cd229a5c931abb67ab3bf7b6170 Shital769 <110831382+Shital769@users.noreply.github.com> 1702099670 +1100	checkout: moving from 87ac65596ae60cd229a5c931abb67ab3bf7b6170 to temp
+87ac65596ae60cd229a5c931abb67ab3bf7b6170 03b5a7ceb15a2b06c3c738b009fe9b1e80f75755 Shital769 <110831382+Shital769@users.noreply.github.com> 1702099777 +1100	checkout: moving from temp to main

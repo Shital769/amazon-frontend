@@ -15,16 +15,11 @@ const CartScreen = () => {
 
   const updateCartHandler = async (item, quantity) => {
     const { data } = await axios.get(`/api/products/${item._id}`);
+    console.log(data);
     if (data.countInStock < quantity) {
       window.alert("Sorry, Product is out of stock.");
       return;
     }
-
-    // Update cart on the server (replace '/api/cart/update' with your actual endpoint)
-    await axios.put("/api/cart/update", {
-      productId: item._id,
-      quantity,
-    });
 
     ctxDispatch({
       type: "CART_ADD_ITEM",
@@ -56,14 +51,14 @@ const CartScreen = () => {
             <ListGroup>
               {cartItems.map((item) => (
                 <ListGroup.Item key={item._id}>
-                  <Row className="align-items.center">
+                  <Row className="align-items-center">
                     <Col md={4}>
                       <img
-                        src={item.image}
-                        alt={item.name}
+                        src={item?.image}
+                        alt={item?.name}
                         className="img-fluid rounded img-thumbnail me-2"
                       />
-                      <Link to={`/product/${item.slug}`}>{item.name}</Link>
+                      <Link to={`/product/${item?.slug}`}>{item?.name}</Link>
                     </Col>
                     <Col md={3}>
                       <Button
@@ -75,18 +70,18 @@ const CartScreen = () => {
                       >
                         <i className="fas fa-minus-circle"></i>
                       </Button>
-                      <span>{item.quantity}</span>
+                      <span>{item?.quantity}</span>
                       <Button
                         variant="light"
                         onClick={() =>
-                          updateCartHandler(item, item.quantity + 1)
+                          updateCartHandler(item, item?.quantity + 1)
                         }
-                        disabled={item.quantity === item.countInStock}
+                        disabled={item?.quantity === item?.countInStock}
                       >
                         <i className="fas fa-plus-circle"></i>
                       </Button>
                     </Col>
-                    <Col md={3}>${item.price}</Col>
+                    <Col md={3}>${item?.price}</Col>
                     <Col md={2}>
                       <Button
                         onClick={() => removeItemHandler(item)}
